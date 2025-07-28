@@ -1,0 +1,383 @@
+@font-face {
+    font-family: neu;
+    src: url(fonts/NeueHaasDisplayMediu.ttf);
+}
+@font-face {
+    font-family: neu;
+    font-weight: 100;
+    src: url(fonts/NeueHaasDisplayLight.ttf);
+}
+@font-face {
+    font-family: neu;
+    font-weight: 200;
+    src: url(fonts/NeueHaasDisplayRoman.ttf);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background-color: #eeeeff; */
+    font-family: neu;
+}
+   
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#page1{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    position: relative;
+    padding: 0vw 2vw;
+}
+
+nav{
+    padding: 2vw 0vw;
+    height: 100px;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+#nav-part2{
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+
+#nav-part2 h4{
+    padding: 10px 20px;
+    border: 1px solid #0000003c;
+    border-radius: 50px;
+    font-weight: 500;
+    color: #000000bb;
+    font-size: 18px;
+    position: relative;
+    transition: all ease 0.4s;
+    overflow: hidden;
+}
+
+#nav-part2 h4::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    left: 0;
+    bottom: -100%;
+    border-radius: 80%;
+    transition: all ease 0.4s; 
+}
+
+
+#nav-part2 h4:hover::after{
+    bottom: 0;
+    border-radius: 0%;
+
+}
+
+
+#nav-part2 h4 a{
+    text-decoration: none;
+    color: #000000bb;
+    position: relative;
+    z-index: 9;
+}
+
+
+#nav-part2 h4:hover a{
+    color: white;
+}
+
+
+#center{
+    height: 79vh;
+    width: 100%;
+    /* background-color: orange; */
+    display: flex;
+    align-items: flex-end;
+    justify-content:space-between;
+    border-bottom: 1px solid #0000003c;
+    padding: 2vw 2vw;
+}
+
+
+#left h3{
+    width: 28vw;
+    font: 4vw;
+    font-size: 1.8vw;
+    line-height: 2vw;
+    padding-bottom: 2vw;
+}
+
+
+#center h1{
+    font-size: 10vw;
+    line-height: 8vw;
+    text-align: right;
+}
+
+
+#page1 video{
+    width: 100%;
+    border-radius: 30px;
+    margin-top: 4vw;   
+    position: relative;
+}
+
+
+#hero-shape{
+    position: absolute;
+    width: 46vw;
+    height: 36vw;
+    right: 0;
+    top: 80vh;
+}
+
+
+#hero-1{
+    height: 100%;
+    width: 100%;
+    background-color: #FE320A;
+    border-bottom-left-radius: 50%;
+    border-top-left-radius: 50%;
+    filter: blur(20px);
+    position: absolute;
+}
+
+
+#hero-2{
+    height: 30vw;
+    width: 30vw;
+    /* background-color: #FE320A; */
+    background: linear-gradient(#FE320A, #fe3f0a);
+    border-radius: 50%;
+    filter: blur(25px);
+    position: absolute;
+    animation: anime2;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+
+#hero-3{
+    height: 30vw;
+    width: 30vw;
+    /* background-color: #FE320A; */
+    background: linear-gradient(#FE320A, #fe3f0a);
+    border-radius: 50%;
+    filter: blur(25px);
+    position: absolute;
+    animation: anime3;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes anime2 {
+    from{
+        transform: translate(5%, -5%);
+    }
+    to{
+        transform: translate(-20%, 30%);
+    }
+}
+@keyframes anime3 {
+    from{
+        transform: translate(55%, -3%);
+    }
+    to{
+        transform: translate(0%, 10%);
+    }
+}
+
+
+#page2{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    padding: 8vw 0vw;
+    position: relative;
+}
+
+
+#moving-text{
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+
+#moving-text::-webkit-scrollbar{
+    display: none;
+}
+
+
+.con{
+    white-space: nowrap;
+    display: inline-block;
+    animation: moveRight;
+    animation-duration: 12s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+
+#moving-text h1{
+    font-size: 9vw;
+    display: inline-block;
+}
+
+
+#gola{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background-color: #FE320A;
+    display: inline-block;
+    margin: 1vw 2vw;
+}
+
+
+@keyframes moveLeft {
+     from{
+        transform: translateX(0);
+    }  
+    to{
+        transform: translateX(-100%);
+     } 
+}
+
+
+
+#page2-bottom{
+    height: 80vh;
+    width: 100%;
+    padding: 4.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 9;
+}
+
+
+#page2-bottom h1{
+    font-size: 4.1vw;
+    width:60%;
+    line-height: 4vw;
+    margin-top: 8vw;
+    margin-left: 2vw;
+}
+
+
+#bottom-part2{
+    width: 22%;
+    margin-right: 2vw;
+}
+
+
+#bottom-part2 img{
+    margin-right: 4vw;
+    margin-top: 26vw;
+    width: 100%;
+    border-radius: 15px;
+}
+
+
+#bottom-part2 p{
+    font-weight: 200;
+    margin-top: 3vw;
+    font-size: 1vw;
+}
+
+
+#page2 #gooey{
+    height: 32vw;
+    width: 32vw;
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(to top right , #ff2d03, #ff5c0b);
+    top: 61%;
+    left: 27%;
+    filter: blur(30px);
+    animation: gooeyy;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+
+@keyframes gooeyy {
+    from{
+        transform: translate(10%, -10%) skew(0);
+    }  
+    to{
+        transform: translate(-10%, 10%) skew(-15deg);
+    } 
+}
+
+
+#page3{
+    min-height: 150vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    padding: 4vw 0vw;
+}
+
+
+.elem{
+    top: 20%;
+    height: 122px;
+    width: 100%;
+    /* border-top: 1px solid #000; */
+    border-bottom: 1px solid #bababaa3;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 0vw 2vw;
+}
+
+
+.elem h2{
+    font-size: 3vw;
+    position: relative;
+    z-index: 9;
+}
+
+
+.overlay{
+    height: 100%;
+    width: 100%;
+    background-color: #FF9831;
+    position: absolute;
+    left: 0;
+    top: -100%;
+    transition: all ease 0.25s;
+}
+
+.elem:hover .overlay{
+    top: 0;
+}
+
+.elem h4{
+    position: absolute;
+    display: flex;
+    z-index: 9;
+    right: 0;
+}
