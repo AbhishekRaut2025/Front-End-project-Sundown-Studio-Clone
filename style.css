@@ -493,10 +493,10 @@ nav{
     left: -10%;
     filter: blur(35px);
     transform: rotate(-10deg);
-    animation: tiltY 8s ease-in-out infinite alternate;
+    animation: tilt1 8s ease-in-out infinite alternate;
 }
 
-@keyframes tiltY {
+@keyframes tilt1 {
   from{
     transform: rotate(-10deg);
   }
