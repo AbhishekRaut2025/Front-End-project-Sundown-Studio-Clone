@@ -3,3 +3,20 @@ const scroll = new LocomotiveScroll({
     smooth: true
 });
 
+
+var elemC = document.querySelector("#elem-container");
+var fixed = document.querySelector("#fixed-image");
+elemC.addEventListener("mouseenter", function(){
+    fixed.style.display = "block"
+})
+elemC.addEventListener("mouseleave", function(){
+    fixed.style.display = "none"
+})
+
+var elems = document.querySelectorAll(".elem");
+elems.forEach(function(dets){
+    dets.addEventListener("mouseenter", function(){
+        var image = dets.getAttribute("data-image");
+        fixed.style.backgroundImage = `url(${image})`;
+    })
+})
